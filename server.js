@@ -81,7 +81,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:note-one',function(req,res){
+app.get('/:noteName',function(req,res){
     var noteName = req.params.noteName;
   res.send(createTemplate(notes[noteName]));  
 });
