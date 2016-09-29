@@ -5,7 +5,9 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var note1 = {
+var notes = {
+
+ 'note-one' : {
     title:'Note one|sha',
     heading:'Note 1',
     date:'sept 22',
@@ -15,7 +17,30 @@ var note1 = {
                 <p>
                     welcome to my app.How r u?welcome to my app.How r u?welcome to my app.How r u?welcome to my app.How r u?
                 </p>`
+},
+ 'note-two' : {
+     title:'Note two|sha',
+    heading:'Note 2',
+    date:'sept 29',
+    content:` <p>
+                    Hi and welcome to note 2. Hi and welcome to note 2. Hi and welcome to note 2. Hi and welcome to note 2.
+                </p>
+                <p>
+                     Hi and welcome to note 2. Hi and welcome to note 2. Hi and welcome to note 2. Hi and welcome to note 2.
+                </p>`},
+ 'note-three' : {
+    title:'Note three|sha',
+    heading:'Note 3',
+    date:'sept 29',
+    content:`<p>
+                    welcome to my app.this is my third note. welcome to my app.this is my third note.
+                </p>
+                <p>
+                    welcome to my app.
+                </p>`},
 };
+
+
 function createTemplate (data){
   var title = data.title;
   var date = data.date;
@@ -56,8 +81,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/note-one',function(req,res){
-  res.send(createTemplate(note1));  
+app.get('/:note-one',function(req,res){
+    var noteName = req.params.noteName;
+  res.send(createTemplate(notes[noteName]));  
 });
 
 app.get('/note-two',function(req,res){
