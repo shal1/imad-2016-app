@@ -1,7 +1,7 @@
 body {
     font-family: calibri;
     background-color: pink;
-    margin-top: 75px;
+    margin-top: 70px;
 }
 
 .center {
@@ -26,7 +26,6 @@ body {
     margin: 0 auto;
     color: blue;
     font-family: arial;
-    padding-top: 70px;
     padding-left: 30px;
     padding-right: 30px
             }
