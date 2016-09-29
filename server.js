@@ -14,7 +14,7 @@ app.get('/note-one',function(req,res){
 });
 
 app.get('/note-two',function(req,res){
-    res.send('thank you');
+   res.sendFile(path.join(__dirname, 'ui', 'note-two.html')) ;
 });
 
 
