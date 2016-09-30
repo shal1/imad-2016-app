@@ -3,7 +3,7 @@ console.log('Loaded!');
 var element = document.getElementById('main-text');
 element.innerHTML = 'Hello and welcome';
 
-var img = document.getElementById('dino');
+var img = document.getElementById('madi');
 img.onclick=function() {
     img.style.marginRight = '80 px';
 };
