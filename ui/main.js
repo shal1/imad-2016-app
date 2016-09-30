@@ -5,5 +5,5 @@ element.innerHTML = 'Hello and welcome';
 
 var img = document.getElementById('madi');
 img.onclick=function() {
-    img.style.marginRight = '80 px';
+    img.style.marginRight = '80px';
 };
