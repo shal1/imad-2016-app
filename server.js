@@ -15,27 +15,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
- 'note-two' : {
-     title:'Note two|sha',
-    heading:'Note 2',
-    date:'sept 29',
-    content:` <p>
-                    Hi and welcome to note 2. Hi and welcome to note 2. Hi and welcome to note 2. Hi and welcome to note 2.
-                </p>
-                <p>
-                     Hi and welcome to note 2. Hi and welcome to note 2. Hi and welcome to note 2. Hi and welcome to note 2.
-                </p>`},
- 'note-three' : {
-    title:'Note three|sha',
-    heading:'Note 3',
-    date:'sept 29',
-    content:`<p>
-                    welcome to my app.this is my third note. welcome to my app.this is my third note.
-                </p>
-                <p>
-                    welcome to my app.
-                </p>`},
-};
+ 
 
 
 function createTemplate (data){
