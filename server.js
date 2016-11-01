@@ -108,9 +108,21 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-app.get('/:noteName',function(req,res){
+app.get('/notes/:noteName',function(req,res){
     var noteName = req.params.noteName;
-  res.send(createTemplate(notes[noteName]));  
+    pool.query("SELECT * FROM articles WHERE title = "+ req.params.noteName,function(err,result){
+        if (err){
+            res.status(500).send(err.toString());
+        }else {
+            if(result.rows.length===0){
+                res.status(404).send('note not found');
+            } else{
+                var articlesData = result.rows[0];
+                res.send(createTemplate(articlesData)); 
+            }
+        }
+    })
+   
 });
 
 
