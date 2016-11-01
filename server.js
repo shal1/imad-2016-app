@@ -110,7 +110,7 @@ app.get('/counter',function(req,res){
 
 app.get('/notes/:noteName',function(req,res){
     var noteName = req.params.noteName;
-    pool.query("SELECT * FROM articles WHERE title ='"+ req.params.noteName + "'",function(err,result){
+    pool.query("SELECT * FROM articles WHERE title =$1",[req.params.noteName],function(err,result){
         if (err){
             res.status(500).send(err.toString());
         }else {
