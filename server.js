@@ -9,24 +9,12 @@ var config={
     host:'db.imad.hasura-app.io',
     port:'5432',
     password:process.env.DB_PASSWORD
-}
+};
 
 var app = express();
 app.use(morgan('combined'));
 
-var notes = {
 
- 'note-one' : {
-    title:'Note one|sha',
-    heading:'Note 1',
-    date:'sept 22',
-    content:` <p>
-                    welcome to my app.How r u?
-                </p>
-                <p>
-                    welcome to my app.How r u?welcome to my app.How r u?welcome to my app.How r u?welcome to my app.How r u?
-                </p>`
-},
  'note-two' : {
      title:'Note two|sha',
     heading:'Note 2',
