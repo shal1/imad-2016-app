@@ -82,7 +82,7 @@ app.get('/submit-name',function(req,res){
     res.send(JSON.stringify(names));
 });
 
-app.get('/notes/:noteName',function(req,res){
+app.get('/article/:noteName',function(req,res){
     var noteName = req.params.noteName;
     pool.query("SELECT * FROM articles WHERE title =$1",[req.params.noteName],function(err,result){
         if (err){
