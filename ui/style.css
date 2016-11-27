@@ -1,7 +1,7 @@
 body {
     font-family: calibri;
     background:url(" http://eskipaper.com/images/background-image-3.jpg");
-    margin-top: 0px;
+    margin-top: 70px;
     margin-right: 0px;
     margin-left: 0px;
 }
@@ -21,6 +21,7 @@ body {
 .img-large {
     height: 320px;
     width : 600px;
+     
 }
 
  
