@@ -1,6 +1,6 @@
 body {
     font-family: calibri;
-    background-color: http://eskipaper.com/images/background-image-3.jpg;
+    background-image:url(" http://eskipaper.com/images/background-image-3.jpg");
     margin-top: 70px;
 }
 
